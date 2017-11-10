@@ -23,6 +23,10 @@ p {
 .navbar {
   background-color: #233237;
   border: none;
+  -webkit-box-shadow: -1px 3px 5px #000000;
+  -moz-box-shadow:    -1px 3px 5px #000000;
+  box-shadow:         -1px 3px 5px #000000;
+  z-index:999;
 }
 
 .navbar-brand {
@@ -112,6 +116,11 @@ p {
   border-top-right-radius: 20px;
 }
 
+#map-col {
+  padding-top: 50px;
+  height: 350px;
+}
+
 .header {
   position: absolute;
   text-align: center;
@@ -179,5 +188,12 @@ p {
   left: 85%;
   z-index: -1;
   background-color: #ffbf00;
+}
+
+#map-canvas {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: -20px;
 }
 
