@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Rock+Salt");
+.button {
+  display: block;
+  font-size: 1rem;
+  background: #87CEFA;
+  border: 1px solid #87CEFA;
+  padding: .75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center; }
+
+.button:hover,
+.button:focus {
+  background: #56baf8;
+  border: 1px solid #56baf8; }
+
+.img-flex {
+  max-width: 100%;
+  max-height: 100%; }
+
+#img-portrait {
+  border-radius: 50%; }
+
+.card {
+  width: 100%;
+  position: relative;
+  border: 1px solid lightGray;
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease;
+  position: relative;
+  margin: 30px 10px 0px 10px; }
+
+.card-horizontal {
+  display: flex;
+  flex-direction: column; }
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 45%; }
+  .card-horizontal {
+    width: 100%;
+    flex-direction: row; }
+  .card-ltr {
+    flex-direction: row-reverse; }
+  .img-card-horizontal {
+    max-width: 50%;
+    max-height: 100vh;
+    padding: 15px;
+    padding-bottom: 100px; } }
+
+@media screen and (min-width: 1000px) {
+  .card {
+    width: 30%; }
+  .card-horizontal {
+    width: 100%;
+    flex-direction: row; }
+  .card-ltr {
+    flex-direction: row-reverse; }
+  .img-card-horizontal {
+    max-width: 50%;
+    height: 100vh;
+    padding: 15px;
+    padding-bottom: 120px; } }
+
+.card:hover {
+  box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2); }
+
+.card h1 {
+  margin: 0; }
+
+.card p {
+  margin: 0 0 30px; }
+
+.card-subtitle {
+  margin: 0 0 15px;
+  font-weight: 700;
+  color: #87CEFA; }
+
+.card-content {
+  padding: 30px 30px 110px; }
+
+.card-details {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+
+.card-details-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444444;
+  margin: 0 30px;
+  padding: 30px 0; }
+
+.flex-grid {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.row-ltr {
+  flex-direction: row; }
+
+.row-rtl {
+  flex-direction: row; }
+
+@media screen and (min-width: 600px) {
+  .row-rtl {
+    flex-direction: row-reverse; } }
+
+.column {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 30px; }
+
+.navigation {
+  background: #233237;
+  color: #87CEFA;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500; }
+
+.nav-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.brand {
+  padding-left: 20px;
+  padding-top: 20px;
+  float: left;
+  font-family: "Rock Salt"; }
+
+.brand a {
+  color: #87CEFA;
+  text-decoration: none; }
+
+nav {
+  float: right; }
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+nav ul li {
+  float: left;
+  position: relative; }
+
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 80px;
+  color: #87CEFA;
+  text-decoration: none; }
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden; }
+
+body {
+  background-color: "honeydew";
+  font-family: "Lato"; }
+
+button {
+  color: blue; }
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 80px; }
+
+@media only screen and (min-width: 600px) {
+  .column {
+    width: 45%; } }

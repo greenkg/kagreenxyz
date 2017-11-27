@@ -1,0 +1,33 @@
+.flex-grid {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.row-ltr {
+  flex-direction: row;
+}
+
+.row-rtl {
+  flex-direction: row;
+}
+
+@media screen and (min-width: 600px) {
+  .row-rtl {
+    flex-direction: row-reverse;
+  }
+}
+
+.column {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}

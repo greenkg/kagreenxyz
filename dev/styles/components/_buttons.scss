@@ -1,0 +1,17 @@
+.button {
+  display: block;
+  font-size: 1rem;
+  background: $accentTextColor;
+  border: 1px solid $accentTextColor;
+  padding: .75rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+.button:hover,
+.button:focus {
+  background: darken($accentTextColor, 10%);
+  border: 1px solid darken($accentTextColor, 10%)
+}

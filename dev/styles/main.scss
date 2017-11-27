@@ -1,0 +1,46 @@
+@import "_variables";
+
+//IMPORT COMPONENT FILES
+@import "components/_buttons.scss";
+@import "components/_images.scss";
+
+// IMPORT LAYOUT FILES
+@import "layout/_card";
+@import "layout/_flexgrid";
+@import "layout/_navigation";
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
+body {
+  background-color: $backgroundColor;
+  font-family: $primaryFont;
+}
+
+button {
+  color: blue;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 80px;
+}
+
+@media only screen and (min-width: 600px) {
+  .column {
+    width: 45%;
+  }
+}

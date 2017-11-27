@@ -1,0 +1,60 @@
+.navigation {
+  background: $navbar-background;
+  color: $accentTextColor;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+}
+
+.nav-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  padding-left: 20px;
+  padding-top: 20px;
+  float: left;
+  font-family: $displayFont;
+}
+
+.brand a {
+  color: $accentTextColor;
+  text-decoration: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 80px;
+  color: $accentTextColor;
+  text-decoration: none;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
