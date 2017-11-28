@@ -224,6 +224,11 @@ nav ul li a {
 .sedona-fonts h1, .sedona-fonts h2, .sedona-fonts h3, .sedona-fonts h4, .sedona-fonts h5, .sedona-fonts h6 {
   font-family: "Alegreya", serif; }
 
+.highlight {
+  content: "";
+  background-color: #ffbf00;
+  min-height: 200px; }
+
 html {
   box-sizing: border-box; }
 

@@ -12,6 +12,32 @@ gulp.task("build", function() {
     .pipe(gulp.dest("build"))
 });
 
+gulp.task("sassToCss", function() {
+  return gulp.src("dev/styles/**/**.scss")
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(gulp.dest("build/assets/css"));
+});
+
+gulp.task("watch", ["sassToCss", "build-all", "browserSync"], function() {
+  gulp.watch("dev/styles/**/*.scss", ["sassToCss"]);
+  gulp.watch("dev/**/*.html", ["build", browserSync.reload]);
+  gulp.watch("dev/pages/travel/*.html", ["build", browserSync.reload]);
+  gulp.watch("dev/js/**/*.js", browserSync.reload);
+});
+
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'build'
+    },
+  })
+});
+
+gulp.task("build-all", ["build", "build-iceland", "build-sedona", "build-msm"], function() {
+
+});
+
 gulp.task("build-iceland", function() {
   return gulp.src(["dev/pages/travel/partials/header.html", "dev/pages/travel/iceland.html", "dev/partials/footer.html"])
   .pipe(concat("index.html"))
@@ -26,25 +52,9 @@ gulp.task("build-sedona", function() {
     .pipe(gulp.dest("build/travel/sedona"))
 });
 
-gulp.task("sassToCss", function() {
-  return gulp.src("dev/styles/**/**.scss")
-    .pipe(sass())
+gulp.task("build-msm", function() {
+  return gulp.src(["dev/pages/travel/partials/header.html", "dev/pages/travel/montsaintmichel.html", "dev/partials/footer.html"])
+  .pipe(concat("index.html"))
     .on('error', sass.logError)
-    .pipe(gulp.dest("build/assets/css"));
-});
-
-gulp.task("watch", ["sassToCss", "build", "build-iceland", "build-sedona", "browserSync"], function() {
-  gulp.watch("dev/styles/**/*.scss", ["sassToCss"]);
-  gulp.watch("dev/**/*.html", ["build", browserSync.reload]);
-  gulp.watch("dev/pages/travel/*.html", ["build-iceland", browserSync.reload]);
-  gulp.watch("dev/pages/travel/*.html", ["build-sedona", browserSync.reload]);
-  gulp.watch("dev/js/**/*.js", browserSync.reload);
-});
-
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: 'build'
-    },
-  })
+    .pipe(gulp.dest("build/travel/montstmichel"))
 });
