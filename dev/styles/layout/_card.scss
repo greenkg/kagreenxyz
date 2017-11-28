@@ -13,6 +13,13 @@
   flex-direction: column;
 }
 
+.img-card-horizontal {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  text-align: center;
+}
+
 @media screen and (min-width: 600px) {
   .card {
     width: 45%;
@@ -25,10 +32,13 @@
     flex-direction: row-reverse;
   }
   .img-card-horizontal {
-    max-width: 50%;
-    max-height: 100vh;
+    width: 50%;
+    height: 100vh;
     padding: 15px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
+  }
+  .card-70 {
+    max-width: 70%;
   }
 }
 
@@ -44,10 +54,13 @@
     flex-direction: row-reverse;
   }
   .img-card-horizontal {
-    max-width: 50%;
+    width: 50%;
     height: 100vh;
     padding: 15px;
-    padding-bottom: 120px;
+    padding-bottom: 140px;
+  }
+  .card-70 {
+    max-width: 70%;
   }
 }
 
@@ -60,7 +73,7 @@
 }
 
 .card p {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 }
 
 .card-subtitle {

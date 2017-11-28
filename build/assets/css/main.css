@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Rock+Salt");
+@import url("https://fonts.googleapis.com/css?family=Cantarell|Rock+Salt|Roboto|Alegreya");
 .button {
   display: block;
   font-size: 1rem;
@@ -17,10 +17,20 @@
 
 .img-flex {
   max-width: 100%;
+  height: auto; }
+
+.img-flex-height {
   max-height: 100%; }
 
 #img-portrait {
   border-radius: 50%; }
+
+.img-wrapper-500 {
+  max-height: 500px; }
+
+.img-wrapper-750 {
+  max-height: 750px;
+  width: auto; }
 
 .card {
   width: 100%;
@@ -35,6 +45,12 @@
   display: flex;
   flex-direction: column; }
 
+.img-card-horizontal {
+  width: 100%;
+  height: 100vh;
+  padding: 15px;
+  text-align: center; }
+
 @media screen and (min-width: 600px) {
   .card {
     width: 45%; }
@@ -44,10 +60,12 @@
   .card-ltr {
     flex-direction: row-reverse; }
   .img-card-horizontal {
-    max-width: 50%;
-    max-height: 100vh;
+    width: 50%;
+    height: 100vh;
     padding: 15px;
-    padding-bottom: 100px; } }
+    padding-bottom: 120px; }
+  .card-70 {
+    max-width: 70%; } }
 
 @media screen and (min-width: 1000px) {
   .card {
@@ -58,10 +76,12 @@
   .card-ltr {
     flex-direction: row-reverse; }
   .img-card-horizontal {
-    max-width: 50%;
+    width: 50%;
     height: 100vh;
     padding: 15px;
-    padding-bottom: 120px; } }
+    padding-bottom: 140px; }
+  .card-70 {
+    max-width: 70%; } }
 
 .card:hover {
   box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2); }
@@ -70,7 +90,7 @@
   margin: 0; }
 
 .card p {
-  margin: 0 0 30px; }
+  margin: 0 0 20px; }
 
 .card-subtitle {
   margin: 0 0 15px;
@@ -97,7 +117,8 @@
 .flex-grid {
   display: inline-flex;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100%; }
 
 .row {
   display: flex;
@@ -111,15 +132,27 @@
 .row-rtl {
   flex-direction: row; }
 
-@media screen and (min-width: 600px) {
-  .row-rtl {
-    flex-direction: row-reverse; } }
-
 .column {
-  width: 100%;
   align-items: center;
   text-align: center;
   padding: 30px; }
+
+.column-full {
+  width: 100%; }
+
+.column-half {
+  width: 100%; }
+
+.column-third {
+  width: 100%; }
+
+@media screen and (min-width: 600px) {
+  .row-rtl {
+    flex-direction: row-reverse; }
+  .column-half {
+    width: 45%; }
+  .column-third {
+    width: 30%; } }
 
 .navigation {
   background: #233237;
@@ -132,14 +165,13 @@
 
 .nav-container {
   position: relative;
-  max-width: 1000px;
   margin: 0 auto; }
 
 .brand {
   padding-left: 20px;
   padding-top: 20px;
   float: left;
-  font-family: "Rock Salt"; }
+  font-family: "Rock Salt", serif; }
 
 .brand a {
   color: #87CEFA;
@@ -173,6 +205,25 @@ nav ul li a {
   height: 70px;
   width: 70px; }
 
+#map-col {
+  padding-top: 50px;
+  height: 350px; }
+
+.text-block {
+  padding-top: 50px; }
+
+#map-canvas {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: -20px; }
+
+.iceland-fonts {
+  font-family: "Roboto", sans-serif; }
+
+.sedona-fonts h1, .sedona-fonts h2, .sedona-fonts h3, .sedona-fonts h4, .sedona-fonts h5, .sedona-fonts h6 {
+  font-family: "Alegreya", serif; }
+
 html {
   box-sizing: border-box; }
 
@@ -187,16 +238,32 @@ a.anchor {
 
 body {
   background-color: "honeydew";
-  font-family: "Lato"; }
+  font-family: "Cantarell", sans-serif;
+  margin: 0; }
 
 button {
   color: blue; }
 
 .container {
-  max-width: 1000px;
+  max-width: 100%;
   margin: auto;
   padding-top: 80px; }
 
-@media only screen and (min-width: 600px) {
-  .column {
-    width: 45%; } }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.6;
+  font-weight: normal; }
+
+h1 {
+  font-size: 2em; }
+
+p {
+  line-height: 1.2;
+  font-size: 1em; }
+
+.text-block {
+  text-align: left; }
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 80%;
+    max-width: 1500px; } }

@@ -2,6 +2,7 @@
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 100%;
 }
 
 .row {
@@ -19,15 +20,33 @@
   flex-direction: row;
 }
 
+.column {
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.column-full {
+  width: 100%;
+
+}
+
+.column-half {
+  width: 100%;
+}
+
+.column-third {
+  width: 100%;
+}
+
 @media screen and (min-width: 600px) {
   .row-rtl {
     flex-direction: row-reverse;
   }
-}
-
-.column {
-  width: 100%;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
+  .column-half {
+    width: 45%;
+  }
+  .column-third {
+    width: 30%;
+  }
 }
