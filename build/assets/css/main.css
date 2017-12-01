@@ -15,6 +15,9 @@
   background: #56baf8;
   border: 1px solid #56baf8; }
 
+.fa {
+  margin-right: 3px; }
+
 .img-flex {
   max-width: 100%;
   height: auto; }
@@ -86,7 +89,7 @@
 .card:hover {
   box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2); }
 
-.card h1 {
+.card h1, .card h2 {
   margin: 0; }
 
 .card p {
@@ -124,7 +127,9 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 1em; }
 
 .row-ltr {
   flex-direction: row; }
@@ -137,22 +142,28 @@
   text-align: center;
   padding: 30px; }
 
-.column-full {
-  width: 100%; }
-
-.column-half {
-  width: 100%; }
-
-.column-third {
+.column-full, .column-half, .column-third, .column-fourth {
   width: 100%; }
 
 @media screen and (min-width: 600px) {
   .row-rtl {
     flex-direction: row-reverse; }
   .column-half {
-    width: 45%; }
+    width: 50%; }
   .column-third {
-    width: 30%; } }
+    width: 33%; }
+  .column-fourth {
+    width: 50%; } }
+
+@media screen and (min-width: 1000px) {
+  .row-rtl {
+    flex-direction: row-reverse; }
+  .column-half {
+    width: 50%; }
+  .column-third {
+    width: 33%; }
+  .column-fourth {
+    width: 25%; } }
 
 .navigation {
   background: #233237;
@@ -221,13 +232,23 @@ nav ul li a {
 .iceland-fonts {
   font-family: "Roboto", sans-serif; }
 
-.sedona-fonts h1, .sedona-fonts h2, .sedona-fonts h3, .sedona-fonts h4, .sedona-fonts h5, .sedona-fonts h6 {
+.sedona-fonts h1 {
   font-family: "Alegreya", serif; }
+
+.sedona-fonts h2, .sedona-fonts h3, .sedona-fonts h4, .sedona-fonts h5, .sedona-fonts h6 {
+  text-transform: uppercase; }
 
 .highlight {
   content: "";
   background-color: #ffbf00;
   min-height: 200px; }
+
+.paragraph {
+  width: 70%;
+  border: 1px solid lightGray;
+  box-shadow: 2px 6px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: honeydew; }
 
 html {
   box-sizing: border-box; }
@@ -256,10 +277,17 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0; }
 
 h1 {
   font-size: 2em; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.5em; }
 
 p {
   line-height: 1.2;
@@ -267,6 +295,8 @@ p {
 
 .text-block {
   text-align: left; }
+  .text-block h1, .text-block h2, .text-block h3, .text-block h4, .text-block h5, .text-block h6 {
+    text-align: center; }
 
 @media screen and (min-width: 600px) {
   .container {

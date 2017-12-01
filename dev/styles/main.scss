@@ -2,6 +2,7 @@
 
 //IMPORT COMPONENT FILES
 @import "components/_buttons.scss";
+@import "components/_icons.scss";
 @import "components/_images.scss";
 
 // IMPORT LAYOUT FILES
@@ -48,10 +49,19 @@ button {
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
   font-weight: normal;
+  margin: 0;
 }
 
 h1 {
   font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 p {
@@ -61,6 +71,9 @@ p {
 
 .text-block {
   text-align: left;
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 600px) {
